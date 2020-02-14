@@ -13,6 +13,11 @@
         return result
       }
 
+      setTimeout(() => {
+        console.log('doing the thing...')
+        window.location = 'apolloks://callback'
+      }, 2000)
+
       const vars = new URL(location.href)
       document.write(
         `<pre>${JSON.stringify(
@@ -22,7 +27,8 @@
           },
           null,
           2
-        )}</pre>`
+        )}</pre>
+        <p>Redirecting in 2s...</p>`
       )
     }
   </script>
