@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <script>
+    window.onload = () => {
+      function parseUrlParams(url /*: string */) {
+        if (!url) url = window.location.search
+        const query = url.substr(1)
+        const result = {}
+        query.split('&').forEach(function(part) {
+          const item = part.split('=')
+          result[item[0]] = decodeURIComponent(item[1])
+        })
+        return result
+      }
+
+      const vars = new URL(location.href)
+      document.write(
+        `<pre>${JSON.stringify(
+          {
+            search: parseUrlParams(vars.search),
+            hash: vars.hash
+          },
+          null,
+          2
+        )}</pre>`
+      )
+    }
+  </script>
+  <body>
+    loading...
+  </body>
+</html>
