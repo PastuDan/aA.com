@@ -1,3 +1,3 @@
 FROM alpine
 
-CMD sleep 30
+CMD sleep 60
