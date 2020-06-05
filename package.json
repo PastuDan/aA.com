@@ -1,4 +1,5 @@
 {
+  "name": "aacom",
   "scripts": {
     "start": "echo helloworld"
   }
