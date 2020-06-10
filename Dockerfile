@@ -1,2 +1,2 @@
-FROM debian
+FROM busybox
 RUN echo helloworld
